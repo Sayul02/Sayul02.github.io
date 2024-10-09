@@ -38,10 +38,10 @@ button:hover{
     margin: auto;
 }
 
-.color-acento{ color:blueviolet; }
+.color-acento{ color:#20733C; }
 
 header{
-    background-color: rgb(245,245,245);
+    background-color: #A9FDAC;
     
 }
 
@@ -49,7 +49,7 @@ header .logo{
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
-    color: blueviolet;
+    color: #20733C;
     font-size: 1.6em;
 }
 
@@ -74,7 +74,7 @@ header a{
 }
 
 header a:hover{
-    color: blueviolet;
+    color: #20733C;
 }
 
 #hero{
@@ -86,31 +86,35 @@ header a:hover{
     height: 90vh;
     background-image: linear-gradient(
         0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
     )
-    ,url("media/hero.jpg");
+    ,url("media/Portada.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center 38%;
 }
 
 #hero h1{
-    color: white;
+    color: #F1FFE7;
 }
 
 #hero button{
     font-size: 1.75em;
 }
 
+#somos-proya {
+    background-color: #F1FFE7;
+}
+
 #somos-proya .container{
     text-align: center;
-    padding: 200px 12px;
+    padding: 150px 10px;
 }
 
 #nuestros-programas{
-    background-color: rgb(30,30,30);
-    color: white;
+    background-color: #1E2019;
+    color: #F1FFE7;
     text-align: center;
 }
 
@@ -121,18 +125,42 @@ header a:hover{
 #nuestros-programas h2{
     margin-top: 0;
     font-size: 3.2em;
+    color: #F1FFE7;
 }
 
-#nuestros-programas p{
-    display: none;
+#nuestros-programas .programas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-#nuestros-programas .carta{
-    background-position: center center;
+#nuestros-programas .carta {
+    flex: 0 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    margin: 0;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden; 
+    height: 150px; 
     background-size: cover;
-    padding: 50px 0px;
-    margin: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 15px;
+}
+
+@media (max-width: 1200px) {
+    #nuestros-programas .carta {
+        flex: 0 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    #nuestros-programas .carta {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
 }
 
 .carta:first-child{
@@ -141,7 +169,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/front-end.jpg");
+    ,url("media/HTML-CSS-JavaScript.png");
 
 }
 
@@ -151,7 +179,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/full-stack.jpg");
+    ,url("media/IoT.jpg");
 }
 
 .carta:nth-child(3){
@@ -160,54 +188,106 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/python.jpg");
+    ,url("media/Python.jpeg");
+}
 
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/Ciberseguridad.jpeg");
+}
+
+.carta:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/MySQL.png");
+}
+
+.carta:nth-child(6){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/C++.jpeg");
+}
+
+.carta:nth-child(7){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/Flutter.jpeg");
+}
+
+.carta:nth-child(8){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/Electronica.png");
+}
+
+#caracteristicas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 #caracteristicas .container{
-    text-align: center;
-    padding: 250px 12px;
+    padding: 100px 12px;
+    margin-top: 0;
 }
 
-#caracteristicas li{
-    margin: 16px 0px;
-    font-weight: bold;
+#caracteristicas h2{
+    margin-top: 35px;
+    font-size: 3.2em;
+    color: #20733C;
 }
 
-#final{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(30,30,30);
-    color: white;
-    height: 80vh;
-}
-
-#final h2{
-    font-size: 9vw;
-}
-
-#final button{
-    font-size: 5vw;
+#caracteristicas .img-container {
+    background-size: cover;
+    background-position: center ;
+    height: 4000px;
+    margin-top: 20px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0)
+    )
+    ,url("media/Nube-de-palabras.png");
 }
 
 footer{
-    background-color: rgb(230,230,230);
+    background-color: #4C342F;
 }
 
 footer p{
+    color: rgb(245,245,245);
+    white-space: nowrap;
     margin: 0;
-    padding: 12px;
-    color: rgb(100,100,100);
+    font-size: 1em;
 }
 
 footer .container{
-    height: 150px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
 }
 
 @media (min-width: 850px){
@@ -231,41 +311,85 @@ footer .container{
         font-size: 5em;
     }
 
-    #somos-proya .container{
-        display: flex;
-        justify-content: space-evenly;
+    #somos-proya .container {
+        text-align: center;
+        padding: 150px 12px;
     }
-
-    #somos-proya .texto{
-        width: 50%;
-        max-width: 600px;
-        text-align: initial;
-        padding-left: 30px;
+    
+    #somos-proya .content-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
     }
-
-    #somos-proya h2{
-        margin-top: 0px;
+    
+    #somos-proya .texto_1 {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        padding: 20px;
     }
-
-    #somos-proya .img-container{
+    
+    #somos-proya .texto_2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.03em;
+    }
+    
+    #somos-proya .img-container {
         background-image: url("media/somos-proya.jpg");
         background-size: cover;
         background-position: center center;
-        height: 500px;
-        width: 400px; 
+        height: 300px;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    
+    @media (min-width: 850px) {
+        #somos-proya .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        #somos-proya .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+    
+        #somos-proya .texto_1 {
+            width: 50%;
+            text-align: left;
+            padding-left: 30px;
+        }
+    
+        #somos-proya .img-container {
+            height: 500px;
+            width: 400px;
+        }
+    
+        #somos-proya .texto_2 {
+            width: 100%;
+        }
+
+        #somos-proya h2{
+            margin-top: 0px;
+        }
+
+        #somos-proya .img-container{
+            background-image: url("media/somos-proya.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 500px;
+            width: 400px; 
+        }
     }
 
     #nuestros-programas .programas{
         display: flex;
         justify-content: center;
-    }
-
-    #nuestros-programas p{
-        display: block;
-        margin-bottom: 30px;
     }
 
     #nuestros-programas h2{
@@ -291,7 +415,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("media/front-end-cropped.jpg");
+        ,url("media/HTML-CSS-JavaScript.png");
 
     }
 
@@ -301,7 +425,7 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("media/full-stack-cropped.jpg");
+        ,url("media/IoT.jpg");
     }
 
     .carta:nth-child(3){
@@ -310,31 +434,62 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("media/python-cropped.jpg");
+        ,url("media/Python.jpeg");
 
+    }
+
+    .carta:nth-child(4){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/Ciberseguridad.jpeg");
+    }
+
+    .carta:nth-child(5){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/MySQL.png");
+
+    }
+
+    .carta:nth-child(6){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/C++.jpeg");
+    }
+
+    .carta:nth-child(7){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/Flutter.jpeg");
+
+    }
+
+    .carta:nth-child(8){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/Electronica.png");
     }
 
     #caracteristicas{
-        background-image: url("media/background-2.jpeg");
+        background-image: url("media/Nube-de-palabras.png");
         background-repeat: no-repeat;
         background-size: 500px 400px;
-        background-position: calc(100vw - 500px) 120px;
-    }
-
-    #caracteristicas .container{
-        text-align: initial;
-    }
-
-    #caracteristicas ul{
-        margin-left: 100px;
-    }
-
-    #final h2{
-        font-size: 5em;
-    }
-
-    #final button{
-        font-size: 2em;
+        background-position: center center;
     }
 
     footer .container{
@@ -344,6 +499,128 @@ footer .container{
 
 @media (min-width: 1200px) {
     #caracteristicas{
-        background-position-x: calc(100vw - 800px);
+        background-size: 80%; 
+        background-position: center center;  
+    }
+}
+
+footer .botones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+footer .boton {
+    flex: 0 1 auto;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+footer .boton:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    footer .botones-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer .boton {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .botones-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer p {
+        align-self: center;
+    }
+}
+
+.carousel-container {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 800%;
+    height: 100%;
+    display: flex;
+    animation: carousel 20s infinite;
+}
+
+.carousel-item {
+    width: 12.5%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes carousel {
+    0%, 7.5% { transform: translateX(0); }
+    12.5%, 20% { transform: translateX(-12.5%); }
+    25%, 32.5% { transform: translateX(-25%); }
+    37.5%, 45% { transform: translateX(-37.5%); }
+    50%, 57.5% { transform: translateX(-50%); }
+    62.5%, 70% { transform: translateX(-62.5%); }
+    75%, 82.5% { transform: translateX(-75%); }
+    87.5%, 95% { transform: translateX(-87.5%); }
+    100% { transform: translateX(0); }
+}
+
+@media (min-width: 850px) {
+    #somos-proya .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #somos-proya .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #somos-proya .texto_1 {
+        width: 50%;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    #somos-proya .carousel-container {
+        width: 400px;
+    }
+
+    #somos-proya .texto_2 {
+        width: 100%;
+    }
+
+    #somos-proya h2 {
+        margin-top: 0px;
     }
 }
